@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     name: FTP-Deploy-Action
     steps:
+      - uses: actions/checkout@master
+
       - name: Ls
         run: ls -al
 
