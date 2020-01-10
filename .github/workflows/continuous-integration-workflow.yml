@@ -9,11 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     name: FTP-Deploy-Action
     steps:
-      - name: FTP-Deploy-Action
-        uses: SamKirkland/FTP-Deploy-Action@2.0.0
-        env:
-          FTP_SERVER: ${{ secrets.FTP_OVH_HOST }}
-          FTP_USERNAME: ${{ secrets.FTP_OVH_USERNAME }}
-          FTP_PASSWORD: ${{ secrets.FTP_OVH_PASSWORD }}
-          # remote_dir: www
-          ARGS: --delete
+      - name: Ls
+        run: ls -al
+
+      # - name: FTP-Deploy-Action
+      #   uses: SamKirkland/FTP-Deploy-Action@2.0.0
+      #   env:
+      #     FTP_SERVER: ${{ secrets.FTP_OVH_HOST }}
+      #     FTP_USERNAME: ${{ secrets.FTP_OVH_USERNAME }}
+      #     FTP_PASSWORD: ${{ secrets.FTP_OVH_PASSWORD }}
+      #     # remote_dir: www
+      #     ARGS: --delete
