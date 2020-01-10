@@ -13,6 +13,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@2.0.0
         env:
           FTP_SERVER: ${{ secrets.FTP_OVH_HOST }}
-          ftp_username: ${{ secrets.FTP_OVH_USERNAME }}
-          ftp_password: ${{ secrets.FTP_OVH_PASSWORD }}
+          FTP_USERNAME: ${{ secrets.FTP_OVH_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_OVH_PASSWORD }}
+          remote_dir: www
           ARGS: --delete
